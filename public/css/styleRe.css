@@ -10,7 +10,12 @@ body{
     background-position: center;
     background-attachment: fixed;
 }
-
+.ocultar{
+    display: none;
+}
+.mostrar{
+    display: block;
+}
 .form-register{
     width: 400px;
     background: #999b9a;

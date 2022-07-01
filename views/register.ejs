@@ -10,15 +10,16 @@
 <body>
     <div class="form-register">
         <h2>Registro</h2>
-    <form action="/register" method="POST">
-            <input class="controls" type="text" name="nombre" id="name" placeholder="ingrese nombre y apeliidos">
-            <input class="controls" type="email" name="email" id="email" placeholder="correo institucional">
-            <input class="controls" type="password" name="password" id="password" placeholder="contraseña">
-            <input class="controls" type="password" name="Repassword"  placeholder="repita contraseña">
+    <form action="/register" method="POST" id="registro">
+            <input class="controls" type="text" name="nombre" id="name" placeholder="ingrese nombre y apeliidos" required>
+            <input class="controls" type="email" name="email" id="email" placeholder="correo institucional" required>
+            <input class="controls" type="password" name="password" id="password" placeholder="contraseña" required>
+            <input class="controls" type="password" name="Repassword" id="Repassword" placeholder="repita contraseña" required>
             <a href="/login" class="butons-cancelar">Cancelar</a>
             <input type="submit" class= "butons"  value="Registrar"> 
     </form>
 </div>
+<script src="/validacionesFormulario.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <% if(typeof alert != "undefined") { %>
@@ -30,7 +31,7 @@
                 showConfirmButton: '<%= showConfirmButton %>',
                 timer: '<%= timer %>'
             }).then(()=>{
-                window.location =' /login <%= ruta %>'
+                window.location ='<%= ruta %>'
             })
         </script>
    <% } %>
